@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ToDoList.Pages
+namespace ToDoList
 {
     /// <summary>
     /// Interaction logic for WorkTasksPage.xaml
