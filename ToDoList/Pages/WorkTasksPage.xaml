@@ -25,10 +25,14 @@
             <TextBox Text="{Binding NewWorkTaskTitle,Mode=TwoWay}"></TextBox>
             <TextBlock Text="Podaj treść zadania:"/>
             <TextBox Text="{Binding NewWorkTaskDescription,Mode=TwoWay}"></TextBox>
-            <StackPanel Orientation="Horizontal">
-                <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj zadanie"></Button>
-                <Button Command="{Binding DeleteSelectedTaskCommand}" Content="Usuń zadanie"></Button>
-            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj zadanie" Style="{StaticResource DefaultStyle}"></Button>
+                <Button  Grid.Column="1" Command="{Binding DeleteSelectedTaskCommand}" Content="Usuń zadanie" Style="{StaticResource DefaultStyle}"></Button>
+            </Grid>
         </StackPanel>
         
     </Grid>
