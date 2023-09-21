@@ -15,14 +15,16 @@ public class WorkTaskPageViewModel : BaseViewModel
     public string NewWorkTaskDescription { get; set; }
 
     public ICommand AddNewTaskCommand { get; set; }
+    public ICommand DeleteSelectedTaskCommand { get; set; }
 
     public WorkTaskPageViewModel()
     {
         AddNewTaskCommand = new RelayCommand(AddNewTask);
+        DeleteSelectedTaskCommand = new RelayCommand(DeleteSelectedTask);
     }
 
     public void AddNewTask()
-    {
+    { 
         var newTask = new WorkTaskViewModel
         {
             Title = NewWorkTaskTitle,
@@ -37,6 +39,16 @@ public class WorkTaskPageViewModel : BaseViewModel
 
         OnPropertyChanged(nameof(NewWorkTaskTitle));
         OnPropertyChanged(nameof(NewWorkTaskDescription));
+    }
+    public void DeleteSelectedTask()
+    {
+
+        var selectedTask = WorkTaskList.Where(x => x.IsSelected).ToList();
+
+        foreach (var task in selectedTask)
+        {
+            WorkTaskList.Remove(task);
+        }
     }
 
 
