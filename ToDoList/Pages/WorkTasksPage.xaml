@@ -12,18 +12,21 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Text="Twoje zadania:"/>
-            <StackPanel Margin="10">
-                <local:WorkTask/>
-                <local:WorkTask/>
-                <local:WorkTask/>
-                <local:WorkTask/>
-            </StackPanel>
+            <ItemsControl ItemsSource="{Binding WorkTaskList}" Margin="10">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:WorkTask>
+                 
+                        </local:WorkTask>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
             <TextBlock Text="Podaj tytuł zadania:"/>
             <TextBox Text="{Binding newWorkTaskTitle}"></TextBox>
             <TextBlock Text="Podaj treść zadania:"/>
             <TextBox Text="{Binding newWorkTaskDescription}"></TextBox>
             <StackPanel Orientation="Horizontal">
-                <Button Content="Dodaj zadanie"></Button>
+                <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj zadanie"></Button>
                 <Button Content="Usuń zadanie"></Button>
             </StackPanel>
         </StackPanel>

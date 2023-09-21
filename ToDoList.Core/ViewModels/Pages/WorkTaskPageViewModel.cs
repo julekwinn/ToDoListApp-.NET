@@ -1,17 +1,23 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace ToDoList.Core;
 
 public class WorkTaskPageViewModel
 {
 
-    public List<WorkTaskViewModel> WorkTaskList { get; set; } = new List<WorkTaskViewModel>();
+    public ObservableCollection<WorkTaskViewModel> WorkTaskList { get; set; } = new ObservableCollection<WorkTaskViewModel>();
 
     public string NewWorkTaskTitle { get; set; }
 
     public string NewWorkTaskDescription { get; set; }
 
     public ICommand AddNewTaskCommand { get; set; }
+
+    public WorkTaskPageViewModel()
+    {
+        AddNewTaskCommand = new RelayCommand(AddNewTask);
+    }
 
     private void AddNewTask()
     {
