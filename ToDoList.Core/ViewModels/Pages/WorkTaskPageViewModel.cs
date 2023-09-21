@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 using ToDoList.Core.Base;
 
@@ -33,6 +34,9 @@ public class WorkTaskPageViewModel : BaseViewModel
 
         NewWorkTaskTitle = string.Empty;
         NewWorkTaskDescription = string.Empty;
+
+        OnPropertyChanged(nameof(NewWorkTaskTitle));
+        OnPropertyChanged(nameof(NewWorkTaskDescription));
     }
 
 
