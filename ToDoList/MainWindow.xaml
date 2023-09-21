@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+   
+        <local:WorkTasksPage/>
 
-    </Grid>
 </Window>

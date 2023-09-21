@@ -9,6 +9,18 @@
       Title="WorkTasksPage">
 
     <Grid>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock Text="Twoje zadania:"/>
+            <local:WorkTask/>
+            <local:WorkTask/>
+            <local:WorkTask/>
+            <local:WorkTask/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Dodaj zadanie"></Button>
+                <Button Content="Usuń zadanie"></Button>
+            </StackPanel>
+        </StackPanel>
         
     </Grid>
 </Page>
