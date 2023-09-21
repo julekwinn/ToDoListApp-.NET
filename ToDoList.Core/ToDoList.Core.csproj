@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\Controls\" />
-    <Folder Include="ViewModels\Pages\" />
   </ItemGroup>
 
 </Project>
