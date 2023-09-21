@@ -12,14 +12,16 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Text="Twoje zadania:"/>
-            <local:WorkTask/>
-            <local:WorkTask/>
-            <local:WorkTask/>
-            <local:WorkTask/>
+            <StackPanel Margin="10">
+                <local:WorkTask/>
+                <local:WorkTask/>
+                <local:WorkTask/>
+                <local:WorkTask/>
+            </StackPanel>
             <TextBlock Text="Podaj tytuł zadania:"/>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding newWorkTaskTitle}"></TextBox>
             <TextBlock Text="Podaj treść zadania:"/>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding newWorkTaskDescription}"></TextBox>
             <StackPanel Orientation="Horizontal">
                 <Button Content="Dodaj zadanie"></Button>
                 <Button Content="Usuń zadanie"></Button>

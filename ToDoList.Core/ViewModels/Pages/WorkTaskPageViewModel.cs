@@ -1,4 +1,6 @@
-﻿namespace ToDoList.Core;
+﻿using System.Windows.Input;
+
+namespace ToDoList.Core;
 
 public class WorkTaskPageViewModel
 {
@@ -8,6 +10,8 @@ public class WorkTaskPageViewModel
     public string NewWorkTaskTitle { get; set; }
 
     public string NewWorkTaskDescription { get; set; }
+
+    public ICommand AddNewTaskCommand { get; set; }
 
     private void AddNewTask()
     {
