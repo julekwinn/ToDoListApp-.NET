@@ -12,13 +12,15 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Text="Twoje zadania:"/>
-            <ItemsControl ItemsSource="{Binding WorkTaskList}" Margin="10">
+            <ScrollViewer>
+                <ItemsControl ItemsSource="{Binding WorkTaskList}" Margin="10">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:WorkTask/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            </ScrollViewer>
             <TextBlock Text="Podaj tytuł zadania:"/>
             <TextBox Text="{Binding NewWorkTaskTitle}"></TextBox>
             <TextBlock Text="Podaj treść zadania:"/>
