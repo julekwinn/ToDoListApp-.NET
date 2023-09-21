@@ -16,6 +16,10 @@
             <local:WorkTask/>
             <local:WorkTask/>
             <local:WorkTask/>
+            <TextBlock Text="Podaj tytuł zadania:"/>
+            <TextBox></TextBox>
+            <TextBlock Text="Podaj treść zadania:"/>
+            <TextBox></TextBox>
             <StackPanel Orientation="Horizontal">
                 <Button Content="Dodaj zadanie"></Button>
                 <Button Content="Usuń zadanie"></Button>
