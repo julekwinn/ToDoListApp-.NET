@@ -19,7 +19,7 @@ public class WorkTaskPageViewModel
         AddNewTaskCommand = new RelayCommand(AddNewTask);
     }
 
-    private void AddNewTask()
+    public void AddNewTask()
     {
         var newTask = new WorkTaskViewModel
         {
@@ -30,5 +30,6 @@ public class WorkTaskPageViewModel
 
         WorkTaskList.Add(newTask);
     }
+
 
 }

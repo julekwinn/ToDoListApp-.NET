@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:ToDoList"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="Jakies tam zadanie"></TextBlock>
-    </Grid>
+    <StackPanel>
+        <TextBlock Text="{Binding Title}"></TextBlock>
+        <TextBlock Text="{Binding Description}"></TextBlock>
+        <TextBlock Text="{Binding CreatedDate}"></TextBlock>
+    </StackPanel>
 </UserControl>

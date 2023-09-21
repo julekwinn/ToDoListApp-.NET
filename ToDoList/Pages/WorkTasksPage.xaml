@@ -15,16 +15,14 @@
             <ItemsControl ItemsSource="{Binding WorkTaskList}" Margin="10">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:WorkTask>
-                 
-                        </local:WorkTask>
+                        <local:WorkTask/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
             <TextBlock Text="Podaj tytuł zadania:"/>
-            <TextBox Text="{Binding newWorkTaskTitle}"></TextBox>
+            <TextBox Text="{Binding NewWorkTaskTitle}"></TextBox>
             <TextBlock Text="Podaj treść zadania:"/>
-            <TextBox Text="{Binding newWorkTaskDescription}"></TextBox>
+            <TextBox Text="{Binding NewWorkTaskDescription}"></TextBox>
             <StackPanel Orientation="Horizontal">
                 <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj zadanie"></Button>
                 <Button Content="Usuń zadanie"></Button>
