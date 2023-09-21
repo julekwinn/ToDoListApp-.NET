@@ -3,13 +3,28 @@
 
 
 
-    <Style TargetType="{x:Type Button}" x:Key="DefaultStyle">
+    <Style TargetType="{x:Type Button}" x:Key="DefaultButtonStyle">
 
         <Setter Property="Background" Value="Orange"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Padding" Value="12"/>
         <Setter Property="FontSize" Value="18"/>
-        <Setter Property="Cursor" Value="Hand"
+        <Setter Property="Cursor" Value="Hand">
+            
+        </Setter>
     </Style>
-    
+
+    <Style TargetType="{x:Type TextBox}" x:Key="DefaultBoxStyle">
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="Margin" Value="0 10"/>
+
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="DefaultTextStyle">
+        <Setter Property="FontSize" Value="14"/>
+  
+
+    </Style>
+
+
 </ResourceDictionary>
