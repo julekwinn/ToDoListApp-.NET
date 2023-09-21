@@ -1,9 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using ToDoList.Core.Base;
 
 namespace ToDoList.Core;
 
-public class WorkTaskPageViewModel
+public class WorkTaskPageViewModel : BaseViewModel
 {
 
     public ObservableCollection<WorkTaskViewModel> WorkTaskList { get; set; } = new ObservableCollection<WorkTaskViewModel>();
@@ -29,6 +30,9 @@ public class WorkTaskPageViewModel
         };
 
         WorkTaskList.Add(newTask);
+
+        NewWorkTaskTitle = string.Empty;
+        NewWorkTaskDescription = string.Empty;
     }
 
 
