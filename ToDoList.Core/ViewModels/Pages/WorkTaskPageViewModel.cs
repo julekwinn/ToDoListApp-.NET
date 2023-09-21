@@ -3,7 +3,7 @@
 public class WorkTaskPageViewModel
 {
 
-    public List<WorkTaskViewModel> WorkTaskList { get; set; }
+    public List<WorkTaskViewModel> WorkTaskList { get; set; } = new List<WorkTaskViewModel>();
 
     public string NewWorkTaskTitle { get; set; }
 
@@ -17,5 +17,8 @@ public class WorkTaskPageViewModel
             Description = NewWorkTaskDescription,
             CreatedDate = DateTime.Now
         };
+
+        WorkTaskList.Add(newTask);
     }
+
 }
